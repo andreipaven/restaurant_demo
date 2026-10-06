@@ -1,13 +1,20 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import { motion } from "motion/react";
 import { palette } from "@/theme/palette";
 
 const AUTOPLAY_MS = 5600;
+
+// How far, or how fast, a drag has to travel before it counts as a swipe.
+const SWIPE_DISTANCE = 56;
+const SWIPE_VELOCITY = 320;
+
+const MotionBox = motion.create(Box);
 
 /**
  * The dishes sit in a deck: the one being served is upright in front, the rest
@@ -40,10 +47,25 @@ export default function DishCarousel({ dishes, labels }) {
   const [playing, setPlaying] = useState(true);
   const total = dishes.length;
 
+  // A drag ends with a click on the same button. This tells the two apart, so
+  // finishing a swipe does not advance the deck a second time.
+  const dragged = useRef(false);
+
   const goTo = useCallback(
     (next) => {
       setPlaying(false);
       setActive((next + total) % total);
+    },
+    [total],
+  );
+
+  // Moving by a delta reads the live index rather than the one captured when
+  // the handler was created, so two gestures landing close together cannot
+  // both step from the same stale position.
+  const step = useCallback(
+    (delta) => {
+      setPlaying(false);
+      setActive((current) => (current + delta + total) % total);
     },
     [total],
   );
@@ -66,24 +88,166 @@ export default function DishCarousel({ dishes, labels }) {
   const current = dishes[active];
 
   return (
-    <Stack sx={{ gap: { xs: 3.5, md: 4.5 }, width: "100%", minWidth: 0 }}>
+    <Stack sx={{ gap: { xs: 3, md: 3.5 }, width: "100%", minWidth: 0 }}>
+      {/* The controls lead, so the deck reads as something you operate rather
+          than a picture that happens to move. */}
+      <Box
+        sx={{
+          display: "grid",
+          gap: { xs: 1, sm: 1.25 },
+          gridTemplateColumns: {
+            xs: "repeat(2, minmax(0, 1fr))",
+            sm: `repeat(${total}, minmax(0, 1fr))`,
+          },
+        }}
+      >
+        {dishes.map((dish, index) => {
+          const selected = index === active;
+
+          return (
+            <Stack
+              key={dish.id}
+              component="button"
+              type="button"
+              aria-pressed={selected}
+              aria-label={labels.pick.replace("{name}", dish.name)}
+              onClick={() => goTo(index)}
+              sx={{
+                gap: 1,
+                px: { xs: 1.25, sm: 1.5 },
+                py: 1.25,
+                borderRadius: "14px",
+                border: "1px solid",
+                borderColor: selected ? palette.accent : palette.line,
+                backgroundColor: selected
+                  ? palette.accentFill
+                  : palette.surfaceRaised,
+                boxShadow: selected
+                  ? `${palette.shadowCard}, ${palette.gloss}`
+                  : palette.gloss,
+                textAlign: "left",
+                cursor: "pointer",
+                alignItems: "stretch",
+                color: selected ? "text.primary" : "text.secondary",
+                transition:
+                  "color 240ms ease, border-color 240ms ease, background-color 240ms ease",
+                "&:hover": {
+                  color: "text.primary",
+                  borderColor: selected ? palette.accent : palette.lineStrong,
+                },
+                "@media (prefers-reduced-motion: reduce)": {
+                  transition: "none",
+                },
+              }}
+            >
+              <Stack
+                direction="row"
+                sx={{ gap: 1, alignItems: "baseline", minWidth: 0 }}
+              >
+                <Box
+                  sx={{
+                    fontFamily: "var(--font-mono), ui-monospace, monospace",
+                    fontSize: 10,
+                    letterSpacing: "0.22em",
+                    color: selected ? palette.accent : "inherit",
+                  }}
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </Box>
+
+                <Box
+                  sx={{
+                    fontSize: 13,
+                    lineHeight: 1.3,
+                    minWidth: 0,
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {dish.tag}
+                </Box>
+              </Stack>
+
+              <Box
+                sx={{
+                  position: "relative",
+                  height: 2,
+                  borderRadius: 1,
+                  overflow: "hidden",
+                  backgroundColor: "divider",
+                }}
+              >
+                <Box
+                  key={`${index}-${active}-${playing}`}
+                  className={selected && playing ? "rail-fill" : undefined}
+                  sx={{
+                    position: "absolute",
+                    inset: 0,
+                    transformOrigin: "left",
+                    backgroundColor: palette.accent,
+                    transform: selected && !playing ? "scaleX(1)" : "scaleX(0)",
+                    animationName: selected && playing ? "rail-fill" : "none",
+                    animationDuration: `${AUTOPLAY_MS}ms`,
+                    animationTimingFunction: "linear",
+                    animationFillMode: "forwards",
+                  }}
+                />
+              </Box>
+            </Stack>
+          );
+        })}
+      </Box>
+
       {/* The clip lives here, on an element with no 3D context of its own:
           a perspective element does not reliably clip transformed children. */}
       <Box sx={{ width: "100%", overflowX: "hidden" }}>
-        <Box
+        <MotionBox
           component="button"
           type="button"
           aria-label={labels.advance}
-          onClick={() => goTo(active + 1)}
+          // Motion sets touch-action itself for a single-axis drag, so the page
+          // still scrolls vertically while a sideways drag moves the deck.
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={0.14}
+          dragMomentum={false}
+          onPointerDown={() => {
+            dragged.current = false;
+          }}
+          onDragStart={() => {
+            dragged.current = true;
+          }}
+          onDragEnd={(event, info) => {
+            const { offset, velocity } = info;
+            if (offset.x < -SWIPE_DISTANCE || velocity.x < -SWIPE_VELOCITY) {
+              step(1);
+            } else if (offset.x > SWIPE_DISTANCE || velocity.x > SWIPE_VELOCITY) {
+              step(-1);
+            }
+          }}
+          onClick={() => {
+            // A swipe ends with a click here, which must not advance the deck
+            // again. Keyboard activation sends no pointer events at all, so the
+            // flag is consumed rather than left standing, or Enter and Space
+            // would stop working once the deck had been dragged.
+            if (dragged.current) {
+              dragged.current = false;
+              return;
+            }
+            step(1);
+          }}
           sx={{
             position: "relative",
             display: "block",
             width: "100%",
-            height: { xs: 380, sm: 460, md: 540 },
+            height: { xs: 300, sm: 360, md: 440 },
             p: 0,
             border: 0,
             background: "none",
-            cursor: "pointer",
+            cursor: "grab",
+            userSelect: "none",
+            "&:active": { cursor: "grabbing" },
             perspective: "1600px",
             // At the narrower breakpoints the back of the fan reaches past the
             // column; let it run off the edge rather than widen the page.
@@ -125,7 +289,7 @@ export default function DishCarousel({ dishes, labels }) {
                 <Box
                   sx={{
                     position: "relative",
-                    width: { xs: "64%", sm: "60%", md: 332 },
+                    width: { xs: "62%", sm: "58%", md: 316 },
                     height: "100%",
                     borderRadius: "26px",
                     overflow: "hidden",
@@ -145,7 +309,10 @@ export default function DishCarousel({ dishes, labels }) {
                     fill
                     placeholder="blur"
                     priority={index === 0}
-                    sizes="(max-width: 600px) 74vw, (max-width: 900px) 62vw, 348px"
+                    // Otherwise the browser starts its own image drag and the
+                    // swipe never reaches Motion.
+                    draggable={false}
+                    sizes="(max-width: 600px) 70vw, (max-width: 900px) 58vw, 332px"
                     style={{
                       objectFit: "cover",
                       filter: "saturate(0.94) contrast(1.06)",
@@ -155,7 +322,7 @@ export default function DishCarousel({ dishes, labels }) {
               </Box>
             );
           })}
-        </Box>
+        </MotionBox>
       </Box>
 
       <Stack
@@ -182,8 +349,8 @@ export default function DishCarousel({ dishes, labels }) {
         </Box>
 
         {/* Every dish sits in the same grid cell, so the block is always as
-            tall as the longest description and the rail below never jumps
-            when the dish changes. Only the active one is visible. */}
+            tall as the longest description and nothing below it jumps when the
+            dish changes. Only the active one is visible. */}
         <Box sx={{ display: "grid", flex: 1, minWidth: 0 }}>
           {dishes.map((dish, index) => {
             const selected = index === active;
@@ -234,82 +401,6 @@ export default function DishCarousel({ dishes, labels }) {
           {current.price}
         </Box>
       </Stack>
-
-      <Box
-        sx={{
-          display: "grid",
-          gap: { xs: 1.5, sm: 2 },
-          gridTemplateColumns: {
-            xs: "repeat(2, minmax(0, 1fr))",
-            sm: `repeat(${total}, minmax(0, 1fr))`,
-          },
-        }}
-      >
-        {dishes.map((dish, index) => {
-          const selected = index === active;
-
-          return (
-            <Stack
-              key={dish.id}
-              component="button"
-              type="button"
-              aria-pressed={selected}
-              aria-label={labels.pick.replace("{name}", dish.name)}
-              onClick={() => goTo(index)}
-              sx={{
-                gap: 1.25,
-                p: 0,
-                border: 0,
-                background: "none",
-                textAlign: "left",
-                cursor: "pointer",
-                alignItems: "stretch",
-                color: selected ? "text.primary" : "text.secondary",
-                transition: "color 240ms ease",
-                "&:hover": { color: "text.primary" },
-              }}
-            >
-              <Box
-                sx={{
-                  position: "relative",
-                  height: 2,
-                  overflow: "hidden",
-                  backgroundColor: "divider",
-                }}
-              >
-                <Box
-                  key={`${index}-${active}-${playing}`}
-                  className={selected && playing ? "rail-fill" : undefined}
-                  sx={{
-                    position: "absolute",
-                    inset: 0,
-                    transformOrigin: "left",
-                    backgroundColor: palette.accent,
-                    transform: selected && !playing ? "scaleX(1)" : "scaleX(0)",
-                    animationName: selected && playing ? "rail-fill" : "none",
-                    animationDuration: `${AUTOPLAY_MS}ms`,
-                    animationTimingFunction: "linear",
-                    animationFillMode: "forwards",
-                  }}
-                />
-              </Box>
-
-              <Box
-                sx={{
-                  fontFamily: "var(--font-mono), ui-monospace, monospace",
-                  fontSize: 10,
-                  letterSpacing: "0.22em",
-                  color: selected ? palette.accent : "inherit",
-                }}
-              >
-                {String(index + 1).padStart(2, "0")}
-              </Box>
-
-              <Box sx={{ fontSize: 13, lineHeight: 1.35 }}>{dish.tag}</Box>
-            </Stack>
-          );
-        })}
-      </Box>
     </Stack>
   );
 }

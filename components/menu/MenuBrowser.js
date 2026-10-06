@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import Image from "next/image";
 import Box from "@mui/material/Box";
@@ -18,9 +18,19 @@ const listMotion = {
   hidden: { opacity: 0 },
   shown: {
     opacity: 1,
-    transition: { staggerChildren: 0.07, delayChildren: 0.05 },
+    // The short lead-in lets the scroll back to the top land first, so the
+    // cards are dealt out where the reader can actually see them.
+    transition: { staggerChildren: 0.07, delayChildren: 0.16 },
   },
   leaving: { opacity: 0, transition: { duration: 0.14 } },
+};
+
+// Reduced motion still needs every state defined, or AnimatePresence waits
+// forever for an exit that never runs.
+const instant = {
+  hidden: { opacity: 1 },
+  shown: { opacity: 1, transition: { duration: 0 } },
+  leaving: { opacity: 1, transition: { duration: 0 } },
 };
 
 const cardMotion = {
@@ -33,8 +43,12 @@ const cardMotion = {
   },
 };
 
-// Matches the sticky header, so the categories park right under it.
+// Fallback only. The header has no fixed height — it grows with its padding,
+// its content and the loaded fonts — so the real value is measured below and
+// published as a custom property. Guessing it leaves a few pixels of daylight
+// under the header for the cards to slide through.
 const HEADER_HEIGHT = 70;
+const HEADER_VAR = "--ob-header-height";
 
 function CategoryIcon({ id, color }) {
   const stroke = {
@@ -100,17 +114,60 @@ export default function MenuBrowser({ categories, legend }) {
   const [active, setActive] = useState(categories[0].id);
   const reduceMotion = useReducedMotion();
   const current = categories.find((category) => category.id === active);
+  const rootRef = useRef(null);
+
+  // Keep the custom property in step with the header's real height, including
+  // when fonts finish loading or the viewport changes the header's padding.
+  useEffect(() => {
+    const header = document.querySelector("header");
+    if (!header) return undefined;
+
+    const apply = () => {
+      const height = Math.round(header.getBoundingClientRect().height);
+      document.documentElement.style.setProperty(HEADER_VAR, `${height}px`);
+    };
+
+    apply();
+    const observer = new ResizeObserver(apply);
+    observer.observe(header);
+    return () => observer.disconnect();
+  }, []);
+
+  const selectCategory = (id) => {
+    setActive(id);
+
+    const root = rootRef.current;
+    if (!root) return;
+
+    const measured = Number.parseInt(
+      getComputedStyle(document.documentElement).getPropertyValue(HEADER_VAR),
+      10,
+    );
+    const headerHeight = Number.isNaN(measured) ? HEADER_HEIGHT : measured;
+    const top = window.scrollY + root.getBoundingClientRect().top - headerHeight;
+
+    // Only ever carry the reader back up. If they are still above the list,
+    // changing category must not drag the page down to it.
+    if (window.scrollY > top) {
+      window.scrollTo({ top, behavior: reduceMotion ? "auto" : "smooth" });
+    }
+  };
 
   return (
     // This wrapper bounds the sticky bar: it lets go once the cards end,
     // instead of following the reader into the sections below.
-    <Box>
+    <Box ref={rootRef}>
       {/* On a phone the categories stay put under the header while the cards
-          run beneath them, so switching never means scrolling back up. */}
+          run beneath them, so switching never means scrolling back up. The
+          extra pixel overlaps the header rather than risking a hairline gap
+          the cards would show through. */}
       <Box
         sx={{
           position: { xs: "sticky", md: "static" },
-          top: { xs: HEADER_HEIGHT, md: "auto" },
+          top: {
+            xs: `calc(var(${HEADER_VAR}, ${HEADER_HEIGHT}px) - 1px)`,
+            md: "auto",
+          },
           zIndex: 5,
           backgroundColor: palette.veilSticky,
           backdropFilter: { xs: "blur(14px)", md: "none" },
@@ -142,7 +199,7 @@ export default function MenuBrowser({ categories, legend }) {
                   type="button"
                   role="tab"
                   aria-selected={selected}
-                  onClick={() => setActive(category.id)}
+                  onClick={() => selectCategory(category.id)}
                   sx={{
                     flex: "0 0 auto",
                     minWidth: { xs: 78, sm: 96 },

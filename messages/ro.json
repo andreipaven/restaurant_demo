@@ -497,5 +497,15 @@
   "metadata": {
     "title": "Obsiddian — bucătărie de sezon în Sibiu",
     "description": "Optsprezece mese, deschis în fiecare zi, patru feluri care se schimbă cu sezonul. Rezervă o masă la Obsiddian, Strada Cetății 14, Sibiu."
+  },
+  "notFound": {
+    "eyebrow": "Eroare 404",
+    "title": "Masa asta nu există.",
+    "lead": "Adresa pe care ai urmat-o nu duce nicăieri. Fie linkul e greșit, fie pagina a fost mutată de când l-ai primit.",
+    "suggestion": "Ia-o pe una din astea:",
+    "home": "Prima pagină",
+    "menu": "Meniul",
+    "contact": "Rezervă o masă",
+    "ovenAlt": "Cuptorul cu lemne, cu focul aprins și scântei care urcă spre horn"
   }
 }

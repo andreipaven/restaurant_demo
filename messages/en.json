@@ -497,5 +497,15 @@
   "metadata": {
     "title": "Obsiddian — seasonal kitchen in Sibiu",
     "description": "Eighteen tables, open every day, four courses that change with the season. Book a table at Obsiddian, 14 Cetății Street, Sibiu."
+  },
+  "notFound": {
+    "eyebrow": "Error 404",
+    "title": "There is no such table.",
+    "lead": "The address you followed leads nowhere. Either the link is wrong, or the page has moved since you were given it.",
+    "suggestion": "Try one of these:",
+    "home": "Home page",
+    "menu": "The menu",
+    "contact": "Book a table",
+    "ovenAlt": "The wood-fired oven, lit, with sparks drifting up the chimney"
   }
 }

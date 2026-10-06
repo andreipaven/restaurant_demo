@@ -29,6 +29,17 @@ export const palette = {
   veilHeader: "rgba(6, 5, 5, 0.80)",
   veilSticky: "rgba(6, 5, 5, 0.93)",
 
+  // The wood-fired oven drawn on the 404 page.
+  ovenBody: "#141113",
+  ovenBrick: "#221C1F",
+  ovenEdge: "#3A3238",
+  ovenMouth: "#070506",
+  ovenBase: "#100D0F",
+  flameCore: "#F0C070",
+  ember: "#E8903A",
+  firewood: "#3A2A20",
+  steam: "#C9C4BA",
+
   // A one-pixel highlight along the top edge of a raised surface: the way
   // light catches lacquer. Used as a box-shadow, on its own or after a drop
   // shadow.
