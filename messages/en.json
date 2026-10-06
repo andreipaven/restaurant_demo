@@ -1,0 +1,501 @@
+{
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "about": "About",
+    "contact": "Contact",
+    "reserve": "Book a table",
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu",
+    "language": "Language",
+    "closeMenu": "Close menu"
+  },
+  "hours": {
+    "days": "Monday–Sunday",
+    "time": "10:00 am–11:30 pm",
+    "note": "The kitchen takes its last order at 10:30 pm."
+  },
+  "hero": {
+    "eyebrow": "Fine dining · 18 tables · open daily",
+    "titleStart": "Dinner becomes",
+    "titleAccent": "a ritual",
+    "lead": "Four courses that change with the season, cooked in the open kitchen and served without rush. A jazz trio plays on Thursdays; the rest of the week the room stays quiet. Bookings open three weeks ahead.",
+    "ctaPrimary": "Book for tonight",
+    "ctaSecondary": "See the menu",
+    "advance": "Go to the next dish",
+    "pickDish": "Show {name}"
+  },
+  "dishes": {
+    "mushroomSoup": {
+      "tag": "Soups",
+      "name": "Wild mushroom cream soup",
+      "desc": "Porcini and chanterelles cooked in butter, cream from Rășinari, parsley oil and a lovage leaf on top.",
+      "alt": "Cream soup in a black ceramic bowl with a green leaf on top",
+      "ingredients": [
+        "porcini",
+        "chanterelles",
+        "cream",
+        "lovage"
+      ]
+    },
+    "beefSoup": {
+      "tag": "Soups",
+      "name": "Beef soup with hand-cut noodles",
+      "desc": "Simmered four hours on the bone, with root vegetables and noodles kneaded that morning. Cream on request.",
+      "alt": "Bowl of soup with noodles, served with a fork alongside",
+      "ingredients": [
+        "beef",
+        "root vegetables",
+        "hand-cut noodles",
+        "parsley"
+      ]
+    },
+    "chickenSoup": {
+      "tag": "Soups",
+      "name": "Chicken soup with egg and lovage",
+      "desc": "Farm chicken, thickened with egg and sharpened with preserved lemon. The lovage goes in at the table.",
+      "alt": "Bowl of soup with egg and herbs",
+      "ingredients": [
+        "farm chicken",
+        "egg",
+        "preserved lemon",
+        "lovage"
+      ]
+    },
+    "lobster": {
+      "tag": "To open",
+      "name": "Lobster with morel cream",
+      "desc": "Lobster tail seared in seaweed butter, spring morels, white asparagus and basil.",
+      "alt": "Lobster and morels on a black plate with a gold rim",
+      "ingredients": [
+        "lobster",
+        "morels",
+        "white asparagus",
+        "seaweed butter"
+      ]
+    },
+    "risotto": {
+      "tag": "Main",
+      "name": "Prawn and dill risotto",
+      "desc": "Carnaroli rice, shellfish stock reduced for four hours, red prawns and dill oil.",
+      "alt": "Deep plate of risotto with prawns and dill on a wooden table",
+      "ingredients": [
+        "carnaroli rice",
+        "red prawns",
+        "shellfish stock",
+        "dill"
+      ]
+    },
+    "tagliatelle": {
+      "tag": "Main",
+      "name": "Tagliatelle with porcini",
+      "desc": "Dough kneaded in the morning and cut by hand, porcini from the Cindrel mountains cooked in butter, fresh parsley and aged cheese grated over it at the table.",
+      "alt": "Tagliatelle twirled on a fork above a black bowl",
+      "ingredients": [
+        "fresh pasta",
+        "porcini",
+        "butter",
+        "aged cheese"
+      ]
+    },
+    "sashimi": {
+      "tag": "Raw",
+      "name": "Nigiri and sashimi platter",
+      "desc": "Bluefin tuna and Faroe salmon, rice seasoned with red vinegar, wasabi grated at your table.",
+      "alt": "Black platter of nigiri and sashimi with chopsticks",
+      "ingredients": [
+        "bluefin tuna",
+        "salmon",
+        "seasoned rice",
+        "wasabi"
+      ]
+    },
+    "rolls": {
+      "tag": "Raw",
+      "name": "Salmon and avocado rolls",
+      "desc": "Faroe salmon, ripe avocado, rice with red vinegar and soy sauce fermented in house.",
+      "alt": "Salmon and avocado sushi rolls on a wooden board",
+      "ingredients": [
+        "salmon",
+        "avocado",
+        "rice",
+        "soy sauce"
+      ]
+    },
+    "potatoes": {
+      "tag": "Sides",
+      "name": "New potatoes with butter and dill",
+      "desc": "Baked in their skins until they split, with farm butter and dill cut at the last moment.",
+      "alt": "Roasted potatoes and yellow beans with fresh herbs",
+      "ingredients": [
+        "new potatoes",
+        "farm butter",
+        "dill",
+        "Praid salt"
+      ]
+    },
+    "parsnip": {
+      "tag": "Sides",
+      "name": "Roast parsnip with thyme",
+      "desc": "Cut thick and roasted until the edges caramelise, with thyme and a drop of linden honey.",
+      "alt": "Roasted parsnip batons with thyme in a bowl",
+      "ingredients": [
+        "parsnip",
+        "thyme",
+        "linden honey",
+        "olive oil"
+      ]
+    },
+    "sprouts": {
+      "tag": "Sides",
+      "name": "Brussels sprouts with burnt cream",
+      "desc": "Pan-roasted until they open leaf by leaf, with cream burnt on the stove and toasted walnuts.",
+      "alt": "Crispy brussels sprouts with a creamy white sauce",
+      "ingredients": [
+        "brussels sprouts",
+        "burnt cream",
+        "walnuts",
+        "garlic"
+      ]
+    },
+    "salad": {
+      "tag": "To open",
+      "name": "Seasonal salad in a ring",
+      "desc": "Vegetables from three gardens in Mărginime, laid in a ring, with pumpkin seed oil and sheep's cheese.",
+      "alt": "Gourmet salad arranged in a ring on a plate",
+      "ingredients": [
+        "seasonal vegetables",
+        "pumpkin seed oil",
+        "sheep's cheese",
+        "herbs"
+      ]
+    },
+    "chocolate": {
+      "tag": "Dessert",
+      "name": "Chocolate sphere, gold leaf",
+      "desc": "72% chocolate, raspberry centre, sea salt. Broken open at the table with warm sauce.",
+      "alt": "Two desserts with fruit, ice cream and pastry",
+      "ingredients": [
+        "72% chocolate",
+        "raspberry",
+        "sea salt",
+        "cream"
+      ]
+    },
+    "cake": {
+      "tag": "Dessert",
+      "name": "Chocolate cake with raspberries",
+      "desc": "Three thin layers, 72% chocolate cream and raspberries from Sibiel, picked in July.",
+      "alt": "Slice of chocolate cake with cream and raspberries",
+      "ingredients": [
+        "72% chocolate",
+        "raspberries",
+        "egg",
+        "flour"
+      ]
+    },
+    "tiramisu": {
+      "tag": "Dessert",
+      "name": "House tiramisu",
+      "desc": "Mascarpone beaten by hand, sponge soaked in speciality coffee and cocoa sifted over it at the table.",
+      "alt": "Slice of tiramisu dusted with cocoa, beside a glass",
+      "ingredients": [
+        "mascarpone",
+        "coffee",
+        "sponge",
+        "cocoa"
+      ]
+    },
+    "wineRed": {
+      "tag": "Drinks",
+      "name": "Fetească neagră, by the glass",
+      "desc": "From Dealu Mare, 2021. Poured from a carafe after twenty minutes of air.",
+      "alt": "Dark liquid in a crystal glass",
+      "ingredients": [
+        "Fetească neagră",
+        "Dealu Mare",
+        "2021",
+        "13.5%"
+      ]
+    },
+    "wineWhite": {
+      "tag": "Drinks",
+      "name": "Fetească regală from Jidvei, by the glass",
+      "desc": "Dry, with high acidity. It goes with the raw fish and with the sour soups.",
+      "alt": "Wine bottles and a glass beside flowers",
+      "ingredients": [
+        "Fetească regală",
+        "Jidvei",
+        "2022",
+        "12.5%"
+      ]
+    },
+    "cellar": {
+      "tag": "Drinks",
+      "name": "From the cellar, by the bottle",
+      "desc": "A hundred and eighty labels, forty of them Romanian. The sommelier picks, if you say what you are eating.",
+      "alt": "Wine bottles in a diamond-shaped wooden rack",
+      "ingredients": [
+        "180 labels",
+        "40 Romanian",
+        "sommelier's choice"
+      ]
+    },
+    "tartare": {
+      "tag": "Starters",
+      "name": "Beef tartare with horseradish",
+      "desc": "Sirloin cut by knife that morning, turkey yolk, grated horseradish and bread toasted on the stove.",
+      "alt": "Beef tartare with olives, bread and tomatoes",
+      "ingredients": [
+        "beef sirloin",
+        "egg yolk",
+        "horseradish",
+        "capers"
+      ]
+    },
+    "bread": {
+      "tag": "Starters",
+      "name": "Sourdough bread with farm butter",
+      "desc": "Baked every morning from the house starter, with whipped butter and Praid salt. It arrives warm.",
+      "alt": "Rustic loaf on a black metal table",
+      "ingredients": [
+        "house starter",
+        "Cibin flour",
+        "farm butter",
+        "Praid salt"
+      ]
+    },
+    "duck": {
+      "tag": "Mains",
+      "name": "Duck with quince",
+      "desc": "Farm duck salted for a day, then five hours in the cooling oven, with quince from Cisnădioara.",
+      "alt": "A piece of meat with sauce on a white plate",
+      "ingredients": [
+        "farm duck",
+        "quince",
+        "red cabbage",
+        "cider vinegar"
+      ]
+    },
+    "salmon": {
+      "tag": "Mains",
+      "name": "Grilled salmon with asparagus",
+      "desc": "Four minutes over beech embers, with green asparagus, thinly sliced radishes and preserved lemon butter.",
+      "alt": "Grilled salmon with asparagus and radishes on a plate",
+      "ingredients": [
+        "Faroe salmon",
+        "asparagus",
+        "radishes",
+        "preserved lemon"
+      ]
+    },
+    "polenta": {
+      "tag": "Sides",
+      "name": "Polenta with sheep's cheese",
+      "desc": "Corn milled at Rășinari, cooked in a cauldron and stirred through with burduf cheese in front of you.",
+      "alt": "White bowl of yellow polenta on a wooden table",
+      "ingredients": [
+        "Rășinari cornmeal",
+        "burduf cheese",
+        "butter",
+        "cream"
+      ]
+    },
+    "carrots": {
+      "tag": "Sides",
+      "name": "Roast carrots with honey and thyme",
+      "desc": "Roasted whole until the edges wrinkle, with linden honey, thyme and buffalo yoghurt underneath.",
+      "alt": "Roasted carrots and salad in metal bowls",
+      "ingredients": [
+        "carrots",
+        "linden honey",
+        "thyme",
+        "buffalo yoghurt"
+      ]
+    }
+  },
+  "strip": {
+    "highlight": "Open kitchen · 18 tables",
+    "events": "Live jazz on Thursdays · wine dinner, first Tuesday of the month"
+  },
+  "platter": {
+    "eyebrow": "The house platter",
+    "title": "The same platter since the first night.",
+    "bodyOne": "When we opened, the kitchen had one dish everybody ordered: eight pieces of raw fish, cut in front of the guest and laid on a stone plate. We never took it off the menu and never changed its shape.",
+    "bodyTwo": "The plates are cut from stone out of a quarry in Mărginime and wear down over years, not months. Exactly eight pieces fit on each, because that is what two people get through before the fish warms up. The order is yours — most start with the white fish and work towards the fatty cuts, but nobody will correct you.",
+    "alt": "Slices of raw fish laid on a round stone plate, seen from above",
+    "statPieces": "pieces cut to order",
+    "statGuests": "people to a plate",
+    "statSince": "on the list since the first night",
+    "cta": "Full menu"
+  },
+  "signature": {
+    "eyebrow": "From the card",
+    "title": "Three plates people come back for",
+    "link": "See the menu"
+  },
+  "testimonials": {
+    "eyebrow": "What stays with you",
+    "title": "Our guests write better than we do.",
+    "rating": "4.9 out of 5, from 412 verified reviews over the last 18 months.",
+    "ratingLabel": "Average rating: 4.9 out of 5",
+    "items": {
+      "one": {
+        "quote": "We came for an anniversary and left with a booking for the following month. The service is precise to the second without ever feeling stiff.",
+        "name": "Andreea Mihalache",
+        "initials": "AM"
+      },
+      "two": {
+        "quote": "The sashimi platter is the best I have eaten outside Tokyo. I say that after eleven years of travelling there.",
+        "name": "Victor Ionescu",
+        "initials": "VI"
+      },
+      "three": {
+        "quote": "I brought four clients to dinner. The contract was signed the next day. I am not saying the two are connected, but I am not denying it either.",
+        "name": "Raluca Pavel",
+        "initials": "RP"
+      }
+    }
+  },
+  "closing": {
+    "eyebrow": "Reservations",
+    "title": "The rest is told at the table.",
+    "note": "Daily, 10:00 am–11:30 pm. Bookings open three weeks ahead."
+  },
+  "menu": {
+    "eyebrow": "The carte",
+    "title": "The menu",
+    "lead": "The house carte, the same every day. Soups go on the fire in the morning, the sides follow the market, and anything from the oven is cooked to order.",
+    "metaTitle": "Menu — Obsiddian",
+    "metaDescription": "Starters, soups, mains, sides, desserts and wines by the glass, from an open kitchen in Sibiu.",
+    "categories": {
+      "starters": "Starters",
+      "soups": "Soups",
+      "mains": "Mains",
+      "sides": "Sides",
+      "dessert": "Dessert",
+      "drinks": "Drinks"
+    },
+    "tablistLabel": "Menu categories",
+    "nutritionLegend": "Values per portion. P protein, F fat, C carbohydrate, in grams.",
+    "ingredientsLabel": "Ingredients",
+    "nutrition": "{kcal} kcal · P {protein} · F {fat} · C {carbs}",
+    "notes": {
+      "allergies": {
+        "title": "Allergies and diets",
+        "body": "Tell your waiter what you avoid. They know what goes into every dish and will say on the spot what can be swapped — plenty of them work without dairy, or without gluten."
+      },
+      "groups": {
+        "title": "Groups",
+        "body": "Up to six, come whenever suits you. From seven up, call ahead: there is only one long table and it books quickly."
+      },
+      "prices": {
+        "title": "Prices",
+        "body": "VAT included. No service charge is added to the bill; the tip is yours to decide."
+      }
+    },
+    "askUs": "Looking for something else? <link>Write or call us</link> and we will tell you what can be cooked tonight."
+  },
+  "about": {
+    "eyebrow": "About us",
+    "title": "An open kitchen and a room that keeps quiet.",
+    "lead": "We opened in 2009 with six tables in a courtyard in Sibiu. The room has grown to eighteen since, but the menu has had only small adjustments — the dishes from that first night are still on the card.",
+    "storyOne": "At the start there were three of us: a cook, a hand and someone who answered the phone. Six tables, one stove and one oven. People kept coming back for the same few dishes, so those stayed.",
+    "storyTwo": "The kitchen opens straight onto the room, with no glass and no curtain. Guests see everything, mistakes included. It keeps us honest and, on a good night, makes a better show than any music would.",
+    "storyThree": "We work with twenty-three producers from Mărginimea Sibiului and the Hârtibaciu valley. We have known most of them for more than ten years. When one has nothing in a given week, we change the side, not the supplier and not the dish.",
+    "imageAlt": "Cast iron pan on the stove in the open kitchen",
+    "statTables": "tables in the room",
+    "statSuppliers": "producers",
+    "statYears": "years in the same courtyard",
+    "principlesTitle": "Three things we never cut short.",
+    "principles": {
+      "fire": {
+        "title": "One fire",
+        "body": "The oven is lit at two in the afternoon with beech wood and stays lit until the last order. Everything that leaves the kitchen warm has passed through it, dessert included."
+      },
+      "pantry": {
+        "title": "The autumn pantry",
+        "body": "In September we put up four hundred jars. In winter the sharpness on the plate comes from those, not from lemons flown in."
+      },
+      "room": {
+        "title": "One seating",
+        "body": "We do not turn tables. A seven o'clock booking is yours until we close, even if you spend three hours over coffee."
+      }
+    },
+    "quote": "My grandmother had no recipes. She had a pantry and a calendar. We kept both and added a better oven.",
+    "quoteAuthor": "Ileana Dobre — head chef, co-founder",
+    "metaTitle": "About us — Obsiddian",
+    "metaDescription": "Eighteen tables, an open kitchen and twenty-three producers from Mărginimea Sibiului, since 2009."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Call us. Someone from the room picks up.",
+    "lead": "Bookings are made by phone or email and confirmed the same day. For Friday and Saturday evenings, call two or three weeks ahead.",
+    "labels": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "hours": "Hours"
+    },
+    "phoneNote": "The surest way. We answer between 10:00 am and 10:00 pm.",
+    "emailNote": "For groups over six or anything out of the ordinary.",
+    "findUsTitle": "How to find us",
+    "notes": {
+      "entrance": {
+        "title": "The entrance",
+        "body": "The wooden gate at number 14 opens onto a courtyard. Walk through it and take the second door, the one with the lantern lit. There is no sign on the street."
+      },
+      "parking": {
+        "title": "Parking",
+        "body": "Six places in the courtyard, first come first served. Otherwise the Piața Mică car park is four minutes on foot and free after eight in the evening."
+      },
+      "events": {
+        "title": "Private events",
+        "body": "The small room seats fourteen and is let whole, with a menu written together. Write to us at least three weeks ahead."
+      }
+    },
+    "metaTitle": "Contact — Obsiddian",
+    "metaDescription": "14 Cetății Street, Sibiu. Bookings by phone or email, daily between 10:00 am and 11:30 pm.",
+    "form": {
+      "title": "Ask for a table",
+      "lead": "Fill this in and we answer the same day. If you want a table tonight, better to call.",
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "date": "Date",
+      "time": "Time",
+      "guests": "Guests",
+      "message": "Message",
+      "messagePlaceholder": "Occasion, allergies, a high chair",
+      "submit": "Send the request",
+      "openCalendar": "Open the calendar",
+      "demoNotice": "This site is a demo, so your request went nowhere — no email is sent and no data is stored.",
+      "errors": {
+        "nameRequired": "Write the name we should put on the table.",
+        "nameShort": "That name looks too short.",
+        "nameLong": "That name is too long.",
+        "phoneRequired": "We need a phone number.",
+        "phoneInvalid": "That number does not look valid. For example: 0722 123 456.",
+        "emailInvalid": "That email address does not look valid.",
+        "dateRequired": "Pick a date.",
+        "dateInvalid": "That date is not valid.",
+        "datePast": "Pick today or a day after.",
+        "timeRequired": "Pick a time from the list.",
+        "guestsRequired": "Pick how many of you are coming.",
+        "messageLong": "That message is too long. 500 characters at most."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Seasonal wood-fire cooking in Sibiu. Eighteen tables, open every day.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "hours": "Hours",
+    "rights": "Demo · fictional content · {year}",
+    "credit": "Website by"
+  },
+  "metadata": {
+    "title": "Obsiddian — seasonal kitchen in Sibiu",
+    "description": "Eighteen tables, open every day, four courses that change with the season. Book a table at Obsiddian, 14 Cetății Street, Sibiu."
+  }
+}

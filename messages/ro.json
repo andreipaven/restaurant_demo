@@ -1,0 +1,501 @@
+{
+  "nav": {
+    "home": "Acasă",
+    "menu": "Meniu",
+    "about": "Despre",
+    "contact": "Contact",
+    "reserve": "Rezervă o masă",
+    "skipToContent": "Sari la conținut",
+    "openMenu": "Deschide meniul",
+    "language": "Limbă",
+    "closeMenu": "Închide meniul"
+  },
+  "hours": {
+    "days": "Luni–Duminică",
+    "time": "10:00–23:30",
+    "note": "Bucătăria ia ultima comandă la 22:30."
+  },
+  "hero": {
+    "eyebrow": "Fine dining · 18 mese · deschis zilnic",
+    "titleStart": "Cina devine",
+    "titleAccent": "un ritual",
+    "lead": "Patru feluri care se schimbă cu sezonul, gătite la vedere și servite fără grabă. Joia cântă un trio de jazz, în restul serilor sala rămâne liniștită. Rezervările se deschid cu trei săptămâni înainte.",
+    "ctaPrimary": "Rezervă pentru diseară",
+    "ctaSecondary": "Vezi meniul",
+    "advance": "Treci la felul următor",
+    "pickDish": "Arată {name}"
+  },
+  "dishes": {
+    "mushroomSoup": {
+      "tag": "Ciorbe",
+      "name": "Supă cremă de ciuperci de pădure",
+      "desc": "Hribi și gălbiori căliți în unt, smântână de la Rășinari, ulei de pătrunjel și o frunză de leuștean deasupra.",
+      "alt": "Supă cremă într-un bol negru de ceramică, cu o frunză verde deasupra",
+      "ingredients": [
+        "hribi",
+        "gălbiori",
+        "smântână",
+        "leuștean"
+      ]
+    },
+    "beefSoup": {
+      "tag": "Ciorbe",
+      "name": "Supă de văcuță cu tăiței de casă",
+      "desc": "Fiartă patru ore pe oase, cu rădăcinoase și tăiței frământați dimineața. Smântână, la cerere.",
+      "alt": "Bol cu supă și tăiței, servit cu furculița alături",
+      "ingredients": [
+        "carne de vită",
+        "rădăcinoase",
+        "tăiței de casă",
+        "pătrunjel"
+      ]
+    },
+    "chickenSoup": {
+      "tag": "Ciorbe",
+      "name": "Ciorbă a la grec cu ou și leuștean",
+      "desc": "Pui de curte, dreasă cu ou și acrită cu zeamă de lămâie murată. Leușteanul se pune la masă.",
+      "alt": "Bol cu ciorbă, ou și verdeață",
+      "ingredients": [
+        "pui de curte",
+        "ou",
+        "lămâie murată",
+        "leuștean"
+      ]
+    },
+    "lobster": {
+      "tag": "Deschidere",
+      "name": "Homar pe cremă de zbârciogi",
+      "desc": "Coadă de homar rumenită în unt de alge, zbârciogi de primăvară, sparanghel alb și busuioc.",
+      "alt": "Homar și zbârciogi pe farfurie neagră cu bordură de aur",
+      "ingredients": [
+        "homar",
+        "zbârciogi",
+        "sparanghel alb",
+        "unt de alge"
+      ]
+    },
+    "risotto": {
+      "tag": "Fel principal",
+      "name": "Risotto cu creveți și mărar",
+      "desc": "Orez carnaroli, fond de crustacee redus patru ore, creveți roșii și ulei de mărar.",
+      "alt": "Farfurie adâncă cu risotto, creveți și mărar, pe o masă de lemn",
+      "ingredients": [
+        "orez carnaroli",
+        "creveți roșii",
+        "fond de crustacee",
+        "mărar"
+      ]
+    },
+    "tagliatelle": {
+      "tag": "Fel principal",
+      "name": "Tagliatelle cu hribi",
+      "desc": "Aluat frământat dimineața și tăiat cu cuțitul, hribi din Cindrel căliți în unt, pătrunjel proaspăt și brânză veche rasă deasupra, la masă.",
+      "alt": "Tagliatelle răsucite pe o furculiță, deasupra unui bol negru",
+      "ingredients": [
+        "aluat proaspăt",
+        "hribi",
+        "unt",
+        "brânză veche"
+      ]
+    },
+    "sashimi": {
+      "tag": "Crud",
+      "name": "Platou nigiri & sashimi",
+      "desc": "Ton roșu și somon din Feroe, orez cu oțet roșu, wasabi ras în fața ta.",
+      "alt": "Platou negru cu nigiri și sashimi, alături de bețișoare",
+      "ingredients": [
+        "ton roșu",
+        "somon",
+        "orez cu oțet",
+        "wasabi"
+      ]
+    },
+    "rolls": {
+      "tag": "Crud",
+      "name": "Rulouri de somon și avocado",
+      "desc": "Somon din Feroe, avocado copt, orez cu oțet roșu și sos de soia fermentat în casă.",
+      "alt": "Rulouri de sushi cu somon și avocado pe o planșetă de lemn",
+      "ingredients": [
+        "somon",
+        "avocado",
+        "orez",
+        "sos de soia"
+      ]
+    },
+    "potatoes": {
+      "tag": "Garnituri",
+      "name": "Cartofi noi cu unt și mărar",
+      "desc": "Copți în coajă până plesnesc, cu unt de fermă și mărar tăiat în ultima clipă.",
+      "alt": "Cartofi copți și fasole galbenă, cu ierburi proaspete",
+      "ingredients": [
+        "cartofi noi",
+        "unt de fermă",
+        "mărar",
+        "sare de Praid"
+      ]
+    },
+    "parsnip": {
+      "tag": "Garnituri",
+      "name": "Păstârnac copt cu cimbru",
+      "desc": "Tăiat gros și copt până se caramelizează la margini, cu cimbru și un strop de miere de tei.",
+      "alt": "Bețe de păstârnac copt cu cimbru, într-un bol",
+      "ingredients": [
+        "păstârnac",
+        "cimbru",
+        "miere de tei",
+        "ulei de măsline"
+      ]
+    },
+    "sprouts": {
+      "tag": "Garnituri",
+      "name": "Varză de Bruxelles cu smântână arsă",
+      "desc": "Rumenită în tigaie până se desface foaie cu foaie, cu smântână arsă pe plită și nucă prăjită.",
+      "alt": "Varză de Bruxelles crocantă, cu sos alb cremos",
+      "ingredients": [
+        "varză de Bruxelles",
+        "smântână arsă",
+        "nucă",
+        "usturoi"
+      ]
+    },
+    "salad": {
+      "tag": "Deschidere",
+      "name": "Salată de sezon în cerc",
+      "desc": "Legume de la trei grădini din Mărginime, așezate în cerc, cu ulei de semințe de dovleac și brânză de burduf.",
+      "alt": "Salată gourmet aranjată în cerc pe farfurie",
+      "ingredients": [
+        "legume de sezon",
+        "ulei de dovleac",
+        "brânză de burduf",
+        "ierburi"
+      ]
+    },
+    "chocolate": {
+      "tag": "Desert",
+      "name": "Sferă de ciocolată, foiță de aur",
+      "desc": "Ciocolată 72%, inimă de zmeură, sare de mare. Se sparge la masă, cu sos cald.",
+      "alt": "Două deserturi cu fructe, înghețată și foietaj",
+      "ingredients": [
+        "ciocolată 72%",
+        "zmeură",
+        "sare de mare",
+        "frișcă"
+      ]
+    },
+    "cake": {
+      "tag": "Desert",
+      "name": "Tort de ciocolată cu zmeură",
+      "desc": "Trei blaturi subțiri, cremă de ciocolată 72% și zmeură de la Sibiel, culeasă în iulie.",
+      "alt": "Felie de tort de ciocolată cu frișcă și zmeură",
+      "ingredients": [
+        "ciocolată 72%",
+        "zmeură",
+        "ou",
+        "făină"
+      ]
+    },
+    "tiramisu": {
+      "tag": "Desert",
+      "name": "Tiramisu de casă",
+      "desc": "Mascarpone bătut la mână, pișcoturi înmuiate în cafea de specialitate și cacao cernută la masă.",
+      "alt": "Felie de tiramisu cu cacao, lângă un pahar",
+      "ingredients": [
+        "mascarpone",
+        "cafea",
+        "pișcoturi",
+        "cacao"
+      ]
+    },
+    "wineRed": {
+      "tag": "Băuturi",
+      "name": "Fetească neagră, pahar",
+      "desc": "Din Dealu Mare, recolta 2021. Se toarnă din carafă, după douăzeci de minute de aerisire.",
+      "alt": "Lichid închis la culoare într-un pahar de cristal",
+      "ingredients": [
+        "Fetească neagră",
+        "Dealu Mare",
+        "2021",
+        "13,5%"
+      ]
+    },
+    "wineWhite": {
+      "tag": "Băuturi",
+      "name": "Fetească regală de Jidvei, pahar",
+      "desc": "Sec, cu aciditate ridicată. Merge cu peștele crud și cu ciorbele acrite cu borș.",
+      "alt": "Sticle de vin și un pahar, lângă flori",
+      "ingredients": [
+        "Fetească regală",
+        "Jidvei",
+        "2022",
+        "12,5%"
+      ]
+    },
+    "cellar": {
+      "tag": "Băuturi",
+      "name": "Selecție din pivniță, sticlă",
+      "desc": "O sută optzeci de etichete, dintre care patruzeci românești. Somelierul alege, dacă îi spui ce mănânci.",
+      "alt": "Sticle de vin într-un suport de lemn în formă de romb",
+      "ingredients": [
+        "180 de etichete",
+        "40 românești",
+        "alegerea somelierului"
+      ]
+    },
+    "tartare": {
+      "tag": "Aperitive",
+      "name": "Tartar de vită cu hrean",
+      "desc": "Mușchi tăiat cu cuțitul dimineața, gălbenuș de curcă, hrean ras și pâine prăjită pe plită.",
+      "alt": "Tartar de vită cu măsline, pâine și roșii",
+      "ingredients": [
+        "mușchi de vită",
+        "gălbenuș",
+        "hrean",
+        "capere"
+      ]
+    },
+    "bread": {
+      "tag": "Aperitive",
+      "name": "Pâine cu maia și unt de fermă",
+      "desc": "Coaptă în fiecare dimineață din maiaua casei, cu unt bătut și sare de Praid. Se aduce caldă.",
+      "alt": "Pâine rustică pe o masă neagră de metal",
+      "ingredients": [
+        "maia de casă",
+        "făină de Cibin",
+        "unt de fermă",
+        "sare de Praid"
+      ]
+    },
+    "duck": {
+      "tag": "Meniuri",
+      "name": "Rață cu gutui",
+      "desc": "Rață de curte ținută o zi la sare, apoi cinci ore în cuptorul care scade, cu gutui de la Cisnădioara.",
+      "alt": "Bucată de carne cu sos, pe farfurie albă",
+      "ingredients": [
+        "rață de curte",
+        "gutui",
+        "varză roșie",
+        "oțet de mere"
+      ]
+    },
+    "salmon": {
+      "tag": "Meniuri",
+      "name": "Somon la grătar cu sparanghel",
+      "desc": "Patru minute pe jar de fag, cu sparanghel verde, ridichi tăiate subțire și unt de lămâie murată.",
+      "alt": "Somon la grătar cu sparanghel și ridichi",
+      "ingredients": [
+        "somon din Feroe",
+        "sparanghel",
+        "ridichi",
+        "lămâie murată"
+      ]
+    },
+    "polenta": {
+      "tag": "Garnituri",
+      "name": "Mămăligă cu brânză de burduf",
+      "desc": "Porumb măcinat la Rășinari, fiartă în ceaun și amestecată cu brânză de burduf, în fața ta.",
+      "alt": "Bol alb cu mămăligă galbenă, pe o masă de lemn",
+      "ingredients": [
+        "mălai de Rășinari",
+        "brânză de burduf",
+        "unt",
+        "smântână"
+      ]
+    },
+    "carrots": {
+      "tag": "Garnituri",
+      "name": "Morcovi copți cu miere și cimbru",
+      "desc": "Copți întregi până se zbârcesc la margini, cu miere de tei, cimbru și iaurt de bivoliță dedesubt.",
+      "alt": "Morcovi copți și salată, în boluri de metal",
+      "ingredients": [
+        "morcovi",
+        "miere de tei",
+        "cimbru",
+        "iaurt de bivoliță"
+      ]
+    }
+  },
+  "strip": {
+    "highlight": "Bucătărie deschisă · 18 mese",
+    "events": "Jazz live joia · cină cu vinuri, prima marți din lună"
+  },
+  "platter": {
+    "eyebrow": "Platoul casei",
+    "title": "Același platou, din prima seară.",
+    "bodyOne": "Când am deschis, bucătăria avea un singur fel pe care îl cereau toți: opt bucăți de pește crud, tăiate în fața oaspetelui și așezate pe o farfurie de piatră. Nu l-am scos niciodată din meniu și nu i-am schimbat forma.",
+    "bodyTwo": "Farfuriile sunt tăiate dintr-o piatră de la o carieră din Mărginime și se tocesc în ani, nu în luni. Pe fiecare încap exact opt bucăți, fiindcă atât apucă doi oameni să mănânce până se încălzește peștele. Ordinea rămâne a ta — de obicei se începe dinspre peștele alb spre cel gras, dar nimeni nu te corectează.",
+    "alt": "Felii de pește crud așezate pe o farfurie rotundă de piatră, văzute de sus",
+    "statPieces": "bucăți tăiate la comandă",
+    "statGuests": "oameni la o farfurie",
+    "statSince": "pe listă, din prima seară",
+    "cta": "Meniul complet"
+  },
+  "signature": {
+    "eyebrow": "Din carte",
+    "title": "Trei farfurii care rămân",
+    "link": "Tot meniul"
+  },
+  "testimonials": {
+    "eyebrow": "Ce rămâne după",
+    "title": "Oaspeții noștri scriu mai bine decât noi.",
+    "rating": "4,9 din 5, din 412 recenzii verificate în ultimele 18 luni.",
+    "ratingLabel": "Nota medie: 4,9 din 5",
+    "items": {
+      "one": {
+        "quote": "Am venit pentru o aniversare și am plecat cu rezervare pentru luna următoare. Serviciul e la secundă, fără să fie rigid nicio clipă.",
+        "name": "Andreea Mihalache",
+        "initials": "AM"
+      },
+      "two": {
+        "quote": "Platoul de sashimi e cel mai bun pe care l-am mâncat în afara Tokyo-ului. O spun după unsprezece ani de drumuri într-acolo.",
+        "name": "Victor Ionescu",
+        "initials": "VI"
+      },
+      "three": {
+        "quote": "Am dus patru clienți la cină. A doua zi, contractul era semnat. Nu spun că e o legătură, dar nici nu o neg.",
+        "name": "Raluca Pavel",
+        "initials": "RP"
+      }
+    }
+  },
+  "closing": {
+    "eyebrow": "Rezervări",
+    "title": "Restul se povestește la masă.",
+    "note": "Zilnic, 10:00–23:30. Rezervările se deschid cu trei săptămâni înainte."
+  },
+  "menu": {
+    "eyebrow": "Carte de bucate",
+    "title": "Meniul",
+    "lead": "Cartea casei, aceeași în fiecare zi. Ciorbele se pun la foc dimineața, garniturile urmează piața, iar ce iese de la cuptor se gătește la comandă.",
+    "metaTitle": "Meniu — Obsiddian",
+    "metaDescription": "Aperitive, ciorbe, feluri principale, garnituri, deserturi și vinuri la pahar, într-o bucătărie deschisă din Sibiu.",
+    "categories": {
+      "starters": "Aperitive",
+      "soups": "Ciorbe",
+      "mains": "Meniuri",
+      "sides": "Garnituri",
+      "dessert": "Desert",
+      "drinks": "Băuturi"
+    },
+    "tablistLabel": "Categorii din meniu",
+    "nutritionLegend": "Valori la porție. P proteine, G grăsimi, C carbohidrați, în grame.",
+    "ingredientsLabel": "Ingrediente",
+    "nutrition": "{kcal} kcal · P {protein} · G {fat} · C {carbs}",
+    "notes": {
+      "allergies": {
+        "title": "Alergii și regimuri",
+        "body": "Spune-i chelnerului ce eviți. Știe ce intră în fiecare fel și îți spune pe loc ce se poate schimba — multe preparate merg și fără lactate, sau fără gluten."
+      },
+      "groups": {
+        "title": "Grupuri",
+        "body": "Până în șase persoane, veniți cum vă e mai ușor. De la șapte în sus sună înainte: avem o singură masă lungă și se rezervă repede."
+      },
+      "prices": {
+        "title": "Prețuri",
+        "body": "Includ TVA. Bacșișul nu se adaugă automat pe notă și rămâne la latitudinea ta."
+      }
+    },
+    "askUs": "Nu găsești ceva? <link>Scrie-ne sau sună</link> și îți spunem ce se poate găti în seara asta."
+  },
+  "about": {
+    "eyebrow": "Despre noi",
+    "title": "O bucătărie deschisă și o sală care tace.",
+    "lead": "Am deschis în 2009 cu șase mese într-o curte interioară din Sibiu. Sala a crescut de atunci până la optsprezece, dar meniul a primit doar mici ajustări — felurile din prima seară sunt și azi în carte.",
+    "storyOne": "La început eram trei: un bucătar, un ajutor și cineva care răspundea la telefon. Șase mese, o plită și un cuptor. Oamenii au început să revină după aceleași câteva feluri, așa că acelea au rămas.",
+    "storyTwo": "Bucătăria e deschisă spre sală, fără geam și fără perdea. Oaspeții văd tot, inclusiv greșelile. Asta ne ține onești și, în zilele bune, face spectacolul mai bun decât orice muzică.",
+    "storyThree": "Lucrăm cu douăzeci și trei de producători din Mărginimea Sibiului și de pe Valea Hârtibaciului. Pe cei mai mulți îi știm de peste zece ani. Când unul nu are marfă într-o săptămână, schimbăm garnitura, nu furnizorul și nu felul.",
+    "imageAlt": "Tigaie de fontă pe plită, în bucătăria deschisă",
+    "statTables": "mese în sală",
+    "statSuppliers": "producători",
+    "statYears": "ani în aceeași curte",
+    "principlesTitle": "Trei lucruri pe care nu le scurtăm.",
+    "principles": {
+      "fire": {
+        "title": "Un singur foc",
+        "body": "Cuptorul se aprinde la două după-amiaza cu lemn de fag și nu se stinge până la ultima comandă. Tot ce iese cald trece prin el, inclusiv desertul."
+      },
+      "pantry": {
+        "title": "Cămara de toamnă",
+        "body": "În septembrie punem la murat patru sute de borcane. Iarna, acrișorul din farfurie vine din ele, nu din lămâi aduse cu avionul."
+      },
+      "room": {
+        "title": "O singură tură",
+        "body": "Nu întoarcem mesele. O rezervare de la șapte e a ta până închidem, chiar dacă stai trei ore la cafea."
+      }
+    },
+    "quote": "Bunica mea nu avea rețete. Avea o cămară și un calendar. Noi am păstrat amândouă și am adăugat un cuptor mai bun.",
+    "quoteAuthor": "Ileana Dobre — bucătar-șef, co-fondatoare",
+    "metaTitle": "Despre noi — Obsiddian",
+    "metaDescription": "Optsprezece mese, o bucătărie deschisă și douăzeci și trei de producători din Mărginimea Sibiului, din 2009."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Sună-ne. Răspunde cineva din sală.",
+    "lead": "Rezervările se fac la telefon sau pe e-mail și se confirmă în aceeași zi. Pentru serile de vineri și sâmbătă, sună cu două–trei săptămâni înainte.",
+    "labels": {
+      "phone": "Telefon",
+      "email": "E-mail",
+      "address": "Adresă",
+      "hours": "Program"
+    },
+    "phoneNote": "Cel mai sigur mod. Răspundem între 10:00 și 22:00.",
+    "emailNote": "Pentru grupuri peste șase persoane sau cereri speciale.",
+    "findUsTitle": "Cum ajungi la noi",
+    "notes": {
+      "entrance": {
+        "title": "Intrarea",
+        "body": "Poarta de lemn de la numărul 14 dă într-o curte interioară. Treci de ea și intri pe ușa a doua, cea cu felinarul aprins. Nu avem firmă la stradă."
+      },
+      "parking": {
+        "title": "Parcare",
+        "body": "Șase locuri în curte, pe principiul primul venit. În rest, parcarea din Piața Mică e la patru minute pe jos și e liberă după ora opt seara."
+      },
+      "events": {
+        "title": "Evenimente private",
+        "body": "Sala mică are paisprezece locuri și se închiriază întreagă, cu meniu scris împreună. Scrie-ne cu cel puțin trei săptămâni înainte."
+      }
+    },
+    "metaTitle": "Contact — Obsiddian",
+    "metaDescription": "Strada Cetății 14, Sibiu. Rezervări la telefon sau pe e-mail, zilnic între 10:00 și 23:30.",
+    "form": {
+      "title": "Cere o masă",
+      "lead": "Completează și îți răspundem în aceeași zi. Dacă vrei diseară, mai bine sună.",
+      "name": "Nume",
+      "phone": "Telefon",
+      "email": "E-mail",
+      "date": "Data",
+      "time": "Ora",
+      "guests": "Persoane",
+      "message": "Mesaj",
+      "messagePlaceholder": "Ocazie, alergii, scaun pentru copil",
+      "submit": "Trimite cererea",
+      "openCalendar": "Deschide calendarul",
+      "demoNotice": "Acest site este o demonstrație, iar cererea ta nu a plecat nicăieri — nu se trimit e-mailuri și nu se salvează date.",
+      "errors": {
+        "nameRequired": "Scrie numele pe care să îl trecem la masă.",
+        "nameShort": "Numele pare prea scurt.",
+        "nameLong": "Numele e prea lung.",
+        "phoneRequired": "Avem nevoie de un telefon.",
+        "phoneInvalid": "Numărul nu pare valid. Exemplu: 0722 123 456.",
+        "emailInvalid": "Adresa de e-mail nu pare validă.",
+        "dateRequired": "Alege o dată.",
+        "dateInvalid": "Data nu e validă.",
+        "datePast": "Alege o dată de azi înainte.",
+        "timeRequired": "Alege o oră din listă.",
+        "guestsRequired": "Alege câte persoane veniți.",
+        "messageLong": "Mesajul e prea lung. Maximum 500 de caractere."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Bucătărie de sezon la foc de lemne, în Sibiu. Optsprezece mese, deschis în fiecare zi.",
+    "navigation": "Navigare",
+    "contact": "Contact",
+    "hours": "Program",
+    "rights": "Demo · conținut fictiv · {year}",
+    "credit": "Website by"
+  },
+  "metadata": {
+    "title": "Obsiddian — bucătărie de sezon în Sibiu",
+    "description": "Optsprezece mese, deschis în fiecare zi, patru feluri care se schimbă cu sezonul. Rezervă o masă la Obsiddian, Strada Cetății 14, Sibiu."
+  }
+}
